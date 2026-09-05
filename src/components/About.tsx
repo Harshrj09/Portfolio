@@ -34,7 +34,7 @@ export default function About() {
         >
           <div className="w-full h-full relative">
             <img
-              src="/assets/about me photo.jpeg"
+              src="/assets/about-me-photo.jpeg"
               alt={personal.name}
               className="w-full h-full object-cover"
             />
