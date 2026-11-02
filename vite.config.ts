@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig(({ command }) => ({
   plugins: [react(), tailwindcss()],
-  base: command === 'serve' ? '/' : '/portfolio/',
+  base: command === 'serve' ? '/' : '/Portfolio/',
   server: {
     host: true,
     port: 5173,

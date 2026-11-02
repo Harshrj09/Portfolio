@@ -1,4 +1,4 @@
-// Files in public/ live under the deploy base path (/portfolio/ on GitHub Pages, / in dev)
+// Files in public/ live under the deploy base path (/Portfolio/ on GitHub Pages, / in dev)
 export const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`
 
 export const personal = {
