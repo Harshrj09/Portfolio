@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" font-family="Space Grotesk, Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#03140a"/>
+      <stop offset="1" stop-color="#000502"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.68" cy="0.45" r="0.5">
+      <stop offset="0" stop-color="#00FF88" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#00FF88" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00FF41"/>
+      <stop offset="1" stop-color="#00E5B0"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#00FF41" stroke-opacity="0.07"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#grid)"/>
+  <rect width="800" height="450" fill="url(#glow)"/>
+
+  <!-- Phone with quick-commerce order -->
+  <g transform="translate(470 70)">
+    <rect width="170" height="310" rx="24" fill="#06120a" stroke="url(#neon)" stroke-width="2.5"/>
+    <rect x="62" y="12" width="46" height="6" rx="3" fill="#00FF41" fill-opacity="0.35"/>
+    <text x="22" y="52" fill="#B0FFB0" font-size="13" font-weight="600">10-min delivery</text>
+    <g transform="translate(20 70)">
+      <rect width="130" height="58" rx="10" fill="#00FF41" fill-opacity="0.08" stroke="#00FF41" stroke-opacity="0.35"/>
+      <rect x="10" y="12" width="34" height="34" rx="8" fill="none" stroke="#00FF88" stroke-width="2"/>
+      <path d="M27 20v18M18 29h18" stroke="#00FF88" stroke-width="3" stroke-linecap="round"/>
+      <rect x="54" y="16" width="64" height="7" rx="3.5" fill="#B0FFB0" fill-opacity="0.6"/>
+      <rect x="54" y="31" width="40" height="7" rx="3.5" fill="#B0FFB0" fill-opacity="0.3"/>
+    </g>
+    <g transform="translate(20 140)">
+      <rect width="130" height="58" rx="10" fill="#00FF41" fill-opacity="0.05" stroke="#00FF41" stroke-opacity="0.2"/>
+      <circle cx="27" cy="29" r="15" fill="none" stroke="#00E5B0" stroke-width="2"/>
+      <rect x="54" y="16" width="56" height="7" rx="3.5" fill="#B0FFB0" fill-opacity="0.5"/>
+      <rect x="54" y="31" width="34" height="7" rx="3.5" fill="#B0FFB0" fill-opacity="0.25"/>
+    </g>
+    <rect x="20" y="250" width="130" height="36" rx="18" fill="url(#neon)"/>
+    <text x="85" y="273" text-anchor="middle" fill="#00140a" font-size="13" font-weight="700">Place order</text>
+  </g>
+
+  <!-- Trust shield -->
+  <g transform="translate(640 60)">
+    <path d="M40 0L80 14V44C80 70 62 88 40 96C18 88 0 70 0 44V14Z" fill="#00140a" stroke="url(#neon)" stroke-width="2.5"/>
+    <path d="M24 48L36 60L58 36" fill="none" stroke="#00FF41" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Survey / Likert bars -->
+  <g transform="translate(60 230)">
+    <text x="0" y="0" fill="#7DFFA8" font-size="12" letter-spacing="2">PURCHASE INTENTION</text>
+    <g transform="translate(0 18)" fill="#00FF41">
+      <rect y="0" width="210" height="12" rx="6" fill-opacity="0.12"/><rect y="0" width="168" height="12" rx="6" fill="url(#neon)"/>
+      <rect y="24" width="210" height="12" rx="6" fill-opacity="0.12"/><rect y="24" width="128" height="12" rx="6" fill="url(#neon)" fill-opacity="0.8"/>
+      <rect y="48" width="210" height="12" rx="6" fill-opacity="0.12"/><rect y="48" width="92" height="12" rx="6" fill="url(#neon)" fill-opacity="0.6"/>
+      <rect y="72" width="210" height="12" rx="6" fill-opacity="0.12"/><rect y="72" width="146" height="12" rx="6" fill="url(#neon)" fill-opacity="0.9"/>
+    </g>
+    <g fill="#B0FFB0" fill-opacity="0.55" font-size="11">
+      <text x="222" y="28">Trust</text><text x="222" y="52">Price</text>
+      <text x="222" y="76">Speed</text><text x="222" y="100">Brand</text>
+    </g>
+  </g>
+
+  <!-- Title -->
+  <text x="60" y="110" fill="#00FF41" font-size="13" letter-spacing="3">EMPIRICAL STUDY · INDIA</text>
+  <text x="60" y="150" fill="#E8FFE8" font-size="34" font-weight="700">Consumer Trust in</text>
+  <text x="60" y="190" fill="url(#neon)" font-size="34" font-weight="700">Quick Commerce</text>
+
+  <!-- Connector line -->
+  <path d="M330 290C380 290 400 230 465 220" fill="none" stroke="#00FF88" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="4 6"/>
+  <circle cx="465" cy="220" r="4" fill="#00FF88"/>
+</svg>

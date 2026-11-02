@@ -1,7 +1,8 @@
 import { personal } from '../data/content'
 import { useTheme } from '../context/ThemeContext'
+import { memo } from 'react'
 
-export default function Footer() {
+const Footer = memo(function Footer() {
   const { theme } = useTheme()
 
   return (
@@ -12,8 +13,10 @@ export default function Footer() {
       }}
     >
       <p className="text-sm" style={{ color: theme === 'dark' ? '#555' : '#aaa' }}>
-        {personal.name} · Great Lakes Institute of Management · Batch 2026–27
+        {personal.name} · Great Lakes Institute of Management · Batch 2026-27
       </p>
     </footer>
   )
-}
+})
+
+export default Footer

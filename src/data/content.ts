@@ -1,10 +1,12 @@
+// Files in public/ live under the deploy base path (/portfolio/ on GitHub Pages, / in dev)
+export const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`
+
 export const personal = {
   name: 'Harshraj Shrivastava',
   tagline: 'B2B Demand Generation & Market Research | MBA Candidate, Great Lakes Institute of Management',
   intro: 'Analytical problem-solver who turns customer and market insight into measurable business outcomes.',
   email: 'hrs091201@gmail.com',
   emailAlt: 'Harshraj.ft272017@greatlakes.edu.in',
-  phone: '9981124293',
   linkedin: 'https://www.linkedin.com/in/harshraj-shrivastava/',
   city: 'Bangalore',
 }
@@ -78,7 +80,8 @@ export const projects = [
     subtitle: 'Product Strategy · PM School · Ranked 2nd / 50',
     description: 'Designed a fitness & health MVP using market and competitor research to define core features, user needs and success metrics.',
     result: 'Ranked 2nd out of 50 teams in the PM School case competition.',
-    file: '/assets/amazon-mvp.pdf',
+    file: asset('assets/amazon-mvp.pdf'),
+    image: asset('assets/amazon-mvp-cover.jpg'),
     status: 'completed' as const,
   },
   {
@@ -86,7 +89,8 @@ export const projects = [
     subtitle: 'Data & Dashboards · Great Lakes',
     description: 'Modelled data in Excel (VLOOKUP, Pivot Tables), queried via SQL, and built Tableau dashboards to benchmark performance and surface insights.',
     result: 'Comprehensive analytics dashboard with actionable business insights.',
-    file: '/assets/capstone-dashboard.png',
+    file: asset('assets/capstone-dashboard.png'),
+    image: asset('assets/capstone-dashboard.png'),
     status: 'completed' as const,
   },
   {
@@ -95,6 +99,7 @@ export const projects = [
     description: 'Researching consumer trust and purchase intention for healthcare products on quick-commerce platforms in India.',
     result: null,
     file: null,
+    image: asset('assets/consumer-trust-cover.svg'),
     status: 'in-progress' as const,
   },
 ]

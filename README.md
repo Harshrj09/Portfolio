@@ -79,7 +79,6 @@ portfolio/
 |-------|-------|
 | Email | hrs091201@gmail.com |
 | Alt Email | Harshraj.ft272017@greatlakes.edu.in |
-| Phone | 9981124293 |
 | LinkedIn | https://www.linkedin.com/in/harshraj-shrivastava/ |
 | City | Bangalore |
 

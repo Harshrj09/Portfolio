@@ -1,7 +1,6 @@
 import Navbar from './components/Navbar'
 import ScrollProgress from './components/ScrollProgress'
-import GridBackground from './components/GridBackground'
-import NoiseOverlay from './components/NoiseOverlay'
+import LiquidBackground from './components/LiquidBackground'
 import SectionGlow from './components/SectionGlow'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -16,10 +15,9 @@ import Footer from './components/Footer'
 
 export default function App() {
   return (
-    <div className="min-h-screen transition-colors duration-300">
+    <div className="relative min-h-screen overflow-x-clip transition-colors duration-300">
       <ScrollProgress />
-      <GridBackground />
-      <NoiseOverlay />
+      <LiquidBackground />
       <Navbar />
       <Hero />
       <SectionGlow index={0} />

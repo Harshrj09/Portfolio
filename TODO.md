@@ -15,7 +15,6 @@
 
 - [x] Email: hrs091201@gmail.com
 - [x] Alt Email: Harshraj.ft272017@greatlakes.edu.in
-- [x] Phone: 9981124293
 - [x] LinkedIn: https://www.linkedin.com/in/harshraj-shrivastava/
 - [x] City: Bangalore
 - [x] Résumé: Copied from Accenture_Resume.pdf

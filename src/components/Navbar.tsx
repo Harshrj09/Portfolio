@@ -2,8 +2,9 @@ import { motion } from 'framer-motion'
 import { useTheme } from '../context/ThemeContext'
 import { Sun, Moon } from 'lucide-react'
 import { navLinks } from '../data/content'
+import { memo } from 'react'
 
-export default function Navbar() {
+const Navbar = memo(function Navbar() {
   const { theme, toggle } = useTheme()
 
   return (
@@ -11,10 +12,10 @@ export default function Navbar() {
       initial={{ y: -80 }}
       animate={{ y: 0 }}
       transition={{ type: 'spring', stiffness: 100, damping: 20 }}
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b"
+      className="fixed top-0 left-0 right-0 z-50 border-b"
       style={{
-        backgroundColor: theme === 'dark' ? 'rgba(18,18,26,0.85)' : 'rgba(247,246,242,0.85)',
-        borderColor: theme === 'dark' ? 'rgba(6,182,212,0.1)' : 'rgba(0,0,0,0.06)',
+        backgroundColor: theme === 'dark' ? 'rgba(4,10,6,0.94)' : 'rgba(246,255,249,0.94)',
+        borderColor: theme === 'dark' ? 'rgba(0,191,165,0.1)' : 'rgba(0,0,0,0.06)',
       }}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -22,16 +23,11 @@ export default function Navbar() {
           <div className="absolute inset-0 animate-spin-slow rounded-full">
             <div
               className="w-full h-full rounded-full"
-              style={{
-                background: 'conic-gradient(from 0deg, #2E6BFF, #06B6D4, #2E6BFF)',
-                padding: '2px',
-              }}
+              style={{ background: 'conic-gradient(from 0deg, #00C853, #00BFA5, #00C853)', padding: '2px' }}
             >
               <div
                 className="w-full h-full rounded-full"
-                style={{
-                  backgroundColor: theme === 'dark' ? '#0E0E12' : '#F7F6F2',
-                }}
+                style={{ backgroundColor: theme === 'dark' ? '#050805' : '#F7F6F2' }}
               />
             </div>
           </div>
@@ -56,7 +52,7 @@ export default function Navbar() {
           onClick={toggle}
           className="relative w-10 h-10 rounded-full flex items-center justify-center transition-colors"
           style={{
-            backgroundColor: theme === 'dark' ? 'rgba(6,182,212,0.15)' : 'rgba(46,107,255,0.1)',
+            backgroundColor: theme === 'dark' ? 'rgba(0,191,165,0.15)' : 'rgba(0,200,83,0.1)',
           }}
           aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
         >
@@ -77,4 +73,6 @@ export default function Navbar() {
       </div>
     </motion.nav>
   )
-}
+})
+
+export default Navbar

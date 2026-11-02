@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react'
+import { createContext, useContext, useEffect, useState, useCallback, useMemo } from 'react'
 import type { ReactNode } from 'react'
 
 type Theme = 'light' | 'dark'
@@ -15,7 +15,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('portfolio-theme') as Theme | null
       if (saved) return saved
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
     }
     return 'dark'
   })
@@ -27,10 +26,12 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     localStorage.setItem('portfolio-theme', theme)
   }, [theme])
 
-  const toggle = () => setTheme(prev => (prev === 'dark' ? 'light' : 'dark'))
+  const toggle = useCallback(() => setTheme(prev => (prev === 'dark' ? 'light' : 'dark')), [])
+
+  const value = useMemo(() => ({ theme, toggle }), [theme, toggle])
 
   return (
-    <ThemeContext.Provider value={{ theme, toggle }}>
+    <ThemeContext.Provider value={value}>
       {children}
     </ThemeContext.Provider>
   )

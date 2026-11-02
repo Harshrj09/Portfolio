@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Send, CheckCircle, Mail, Phone, MapPin, ExternalLink, AlertCircle, Loader2 } from 'lucide-react'
+import { Send, CheckCircle, Mail, MapPin, ExternalLink, AlertCircle, Loader2 } from 'lucide-react'
 import emailjs from '@emailjs/browser'
 import SectionHeading, { gradients } from './SectionHeading'
 import { personal } from '../data/content'
@@ -44,13 +44,12 @@ export default function Contact() {
 
   const contactLinks = [
     { icon: Mail, label: personal.email, href: `mailto:${personal.email}` },
-    { icon: Phone, label: personal.phone, href: `tel:${personal.phone}` },
     { icon: ExternalLink, label: 'LinkedIn', href: personal.linkedin },
     { icon: MapPin, label: personal.city, href: '#' },
   ]
 
   return (
-    <section id="contact" className="py-10 px-6 max-w-6xl mx-auto">
+    <section id="contact" className="py-6 px-6 max-w-6xl mx-auto">
       <SectionHeading subtitle="Drop me a message anytime" gradient={gradients[6]}>Let's connect.</SectionHeading>
 
       <div className="grid md:grid-cols-2 gap-8">
@@ -77,7 +76,7 @@ export default function Contact() {
               <div
                 className="w-10 h-10 rounded-full flex items-center justify-center transition-colors"
                 style={{
-                  backgroundColor: theme === 'dark' ? 'rgba(46,107,255,0.1)' : 'rgba(46,107,255,0.08)',
+                  backgroundColor: theme === 'dark' ? 'rgba(0,200,83,0.1)' : 'rgba(0,200,83,0.08)',
                 }}
               >
                 <link.icon size={18} className="text-blue" />
@@ -172,7 +171,7 @@ export default function Contact() {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   className="flex items-center gap-2 px-4 py-3 rounded-xl text-sm"
-                  style={{ backgroundColor: 'rgba(255,107,74,0.1)', color: '#FF6B4A' }}
+                  style={{ backgroundColor: 'rgba(255,92,92,0.1)', color: '#FF5C5C' }}
                 >
                   <AlertCircle size={16} />
                   Failed to send. Please try again or email directly.
@@ -182,7 +181,7 @@ export default function Contact() {
                 type="submit"
                 disabled={status === 'sending'}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium text-white transition-all hover:scale-105 hover:shadow-lg disabled:opacity-50 disabled:hover:scale-100 disabled:cursor-not-allowed"
-                style={{ backgroundColor: '#2E6BFF' }}
+                style={{ background: 'linear-gradient(135deg, #00A844, #00C853)' }}
               >
                 {status === 'sending' ? (
                   <>

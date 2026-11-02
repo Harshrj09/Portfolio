@@ -12,7 +12,7 @@ export default function Education() {
   const { theme } = useTheme()
 
   return (
-    <section id="education" className="py-10 px-6 max-w-6xl mx-auto">
+    <section id="education" className="py-6 px-6 max-w-6xl mx-auto">
       <SectionHeading subtitle="Academic background and beyond" gradient={gradients[7]}>Education & More</SectionHeading>
 
       <div className="grid md:grid-cols-2 gap-6">
@@ -46,7 +46,7 @@ export default function Education() {
                   <div className="text-right">
                     <span className="text-xs font-medium text-blue">{edu.year}</span>
                     {edu.detail && (
-                      <p className="text-xs mt-0.5" style={{ color: theme === 'dark' ? '#666' : '#999' }}>
+                      <p className="text-xs mt-0.5" style={{ color: theme === 'dark' ? '#8a8a8a' : '#777' }}>
                         {edu.detail}
                       </p>
                     )}
